@@ -5,8 +5,8 @@
   <test thread-count="5" name="Test">
   <parameter name="browser" value="Chrome"/>
     <classes>
-     <!-- <class name="testscript.LoginTest"/>-->
-      <class name="testscript.AdminUsersTest"/>
+     <class name="testscript.LoginTest"/>
+  <!--    <class name="testscript.AdminUsersTest"/>-->
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
