@@ -20,7 +20,6 @@ public class PageUtility
 		drop.selectByVisibleText(text);
 		
 	}
-	
 	public void dropDownByIndex(WebElement element,int index)
 	{
 		Select drop=new Select(element);
@@ -88,10 +87,7 @@ public class PageUtility
 	}
 	
 // JavaScript :	
-//	JavascriptExecutor js = (JavascriptExecutor) driver;
-//	js.executeScript("arguments[0].value='value';", WebElement name);
-//	js.executeScript("arguments[0].click();", WebElement name);
-	
+
 	public void javaScriptExecutorValue(WebDriver driver, WebElement element,String value)
 	{
 		JavascriptExecutor js = (JavascriptExecutor)driver ;

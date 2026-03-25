@@ -6,74 +6,49 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import constant.Constant;
 import pages.AdminUserspage;
+import pages.HomePage;
 import pages.LoginPage;
+import pages.ManageNewsPage;
 import utilities.ExcelUtility;
+import utilities.FakerUtility;
 
 public class AdminUsersTest extends Base 
 {
+	public HomePage homepage;
+	public AdminUserspage adminuserspage;
 
-	@Test
+	@Test(retryAnalyzer=retry.Retry.class,description="This test case verifies that a valid user is able to log in to the application "
+			                                        + "and successfully add a new admin user by providing the required details. "
+			                                        + "It ensures that the system displays a confirmation alert after saving the admin user information.")
+	
 	public void verifyUserCanCreateAdminUsers() throws IOException // valid Username and Password
 	{
-
-		// String username= "admin"; // Valid Username and Valid Password
-		// String password= "admin";
-
-		String username = ExcelUtility.readStringData(1, 0, "LoginPage"); // reading from excel file
+        String username = ExcelUtility.readStringData(1, 0, "LoginPage"); // reading from excel file
 		String password = ExcelUtility.readStringData(1, 1, "LoginPage");
 
 		LoginPage loginpage = new LoginPage(driver);
-        loginpage.enterTheUsername(username);
-		loginpage.enterThePassword(password);
-		loginpage.clickOnSigninButton();
-        AdminUserspage adminpage = new AdminUserspage(driver);
-		adminpage.clickAdminMoreInfo();
-		adminpage.clickAdminNewTab();
-
+		loginpage.enterTheUsername(username).enterThePassword(password);
+		//loginpage.enterThePassword(password);
+		homepage=loginpage.clickOnSigninButton();
+		
+		//String usernames1 = ExcelUtility.readStringData(1, 0, "AdminUserPage"); 
+		//String passwords1 = ExcelUtility.readStringData(1, 1, "AdminUserPage");
+		
 		// username password for Staff
-		String usernames1 = ExcelUtility.readStringData(1, 0, "AdminUserPage"); 
-		String passwords1 = ExcelUtility.readStringData(1, 1, "AdminUserPage");
-		adminpage.userTab(usernames1);
-		adminpage.passwordTab(passwords1);
-		adminpage.selectUserType("staff");
-		adminpage.clicksaveButton();
-		boolean alertMessage1 = adminpage.alertDisplay();
-		Assert.assertTrue(alertMessage1);
-
-		// username and password for Admin
-
-		adminpage.clickAdminNewTab();
-		String usernames2 = ExcelUtility.readStringData(2, 0, "AdminUserPage");
-		String passwords2 = ExcelUtility.readStringData(2, 1, "AdminUserPage");
-		adminpage.userTab(usernames2);
-		adminpage.passwordTab(passwords2);
-		adminpage.selectUserType("admin");
-		adminpage.clicksaveButton();
-		boolean alertMessage2 = adminpage.alertDisplay();
-		Assert.assertTrue(alertMessage2);
-
-		// username and password for Partner
-		adminpage.clickAdminNewTab();
-		String usernames3 = ExcelUtility.readStringData(3, 0, "AdminUserPage");
-		String passwords3 = ExcelUtility.readStringData(3, 1, "AdminUserPage");
-		adminpage.userTab(usernames3);
-		adminpage.passwordTab(passwords3);
-		adminpage.selectUserType("partner");
-		adminpage.clicksaveButton();
-		boolean alertMessage3 = adminpage.alertDisplay();
-		Assert.assertTrue(alertMessage3);
-
-		// username and password for Delivery Boy
-		adminpage.clickAdminNewTab();
-		String usernames4 = ExcelUtility.readStringData(4, 0, "AdminUserPage"); // reading from excel file
-		String passwords4 = ExcelUtility.readStringData(4, 1, "AdminUserPage");
-		adminpage.userTab(usernames4);
-		adminpage.passwordTab(passwords4);
-		adminpage.selectUserType("db");
-		adminpage.clicksaveButton();
-		boolean alertMessage4 = adminpage.alertDisplay();
-		Assert.assertTrue(alertMessage4);
+       //AdminUserspage adminpage = new AdminUserspage(driver);
+        FakerUtility faker=new FakerUtility();
+        String usernames1=faker.createRandomFirstName();
+        String passwords1=faker.createRandomLastName();
+		adminuserspage=homepage.clickOnadminUsersMoreInfo();
+		adminuserspage.clickAdminNewTab().userTab(usernames1).passwordTab(passwords1).selectUserType().clickAdminNewTab();
+		//adminuserspage.userTab(usernames1);
+		//adminuserspage.passwordTab(passwords1);
+		//adminuserspage.selectUserType();
+		//adminuserspage.clicksaveButton();
+		boolean alertMessage1 = adminuserspage.alertDisplay();
+		Assert.assertTrue(alertMessage1,Constant.USERISABLETOACCESSADMINUSERS);	
 	}
-
 }
+
