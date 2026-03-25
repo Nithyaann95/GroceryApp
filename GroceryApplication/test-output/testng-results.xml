@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-03-25T12:19:56 IST" name="GroceryApp" finished-at="2026-03-25T12:20:23 IST" duration-ms="26338">
+  <suite started-at="2026-03-25T12:53:24 IST" name="GroceryApp" finished-at="2026-03-25T12:53:36 IST" duration-ms="12293">
     <groups>
-      <group name="regression">
-        <method signature="LoginTest.verifyTheUserisAbleToLoginUsingValidCredentials()[pri:0, instance:testscript.LoginTest@7dfd3c81]" name="verifyTheUserisAbleToLoginUsingValidCredentials" class="testscript.LoginTest"/>
-      </group> <!-- regression -->
     </groups>
-    <test started-at="2026-03-25T12:19:56 IST" name="Test" finished-at="2026-03-25T12:20:23 IST" duration-ms="26338">
-      <class name="testscript.LoginTest">
-        <test-method is-config="true" signature="browserinitalization(java.lang.String)[pri:0, instance:testscript.LoginTest@7dfd3c81]" started-at="2026-03-25T12:19:57 IST" name="browserinitalization" finished-at="2026-03-25T12:20:07 IST" duration-ms="10168" status="PASS">
+    <test started-at="2026-03-25T12:53:24 IST" name="Test" finished-at="2026-03-25T12:53:36 IST" duration-ms="12293">
+      <class name="testscript.AdminUsersTest">
+        <test-method is-config="true" signature="browserinitalization(java.lang.String)[pri:0, instance:testscript.AdminUsersTest@6f43c82]" started-at="2026-03-25T12:53:24 IST" name="browserinitalization" finished-at="2026-03-25T12:53:27 IST" duration-ms="2728" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -21,72 +18,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserinitalization -->
-        <test-method signature="verifyTheUserisAbleToLoginUsingInvalidusernameandPassword()[pri:0, instance:testscript.LoginTest@7dfd3c81]" started-at="2026-03-25T12:20:07 IST" name="verifyTheUserisAbleToLoginUsingInvalidusernameandPassword" description="This test case verifies that the application does not allow a user to log in when both the username and password are incorrect. The system should reject the login attempt and display an appropriate error message or alert indicating invalid credentials." finished-at="2026-03-25T12:20:12 IST" duration-ms="5143" status="PASS">
+        <test-method signature="verifyUserCanCreateAdminUsers()[pri:0, instance:testscript.AdminUsersTest@6f43c82]" started-at="2026-03-25T12:53:27 IST" name="verifyUserCanCreateAdminUsers" description="This test case verifies that a valid user is able to log in to the application and successfully add a new admin user by providing the required details. It ensures that the system displays a confirmation alert after saving the admin user information." finished-at="2026-03-25T12:53:36 IST" duration-ms="9082" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyTheUserisAbleToLoginUsingInvalidusernameandPassword -->
-        <test-method is-config="true" signature="browserQuit()[pri:0, instance:testscript.LoginTest@7dfd3c81]" started-at="2026-03-25T12:20:12 IST" name="browserQuit" finished-at="2026-03-25T12:20:13 IST" duration-ms="765" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserQuit -->
-        <test-method is-config="true" signature="browserinitalization(java.lang.String)[pri:0, instance:testscript.LoginTest@7dfd3c81]" started-at="2026-03-25T12:20:13 IST" name="browserinitalization" finished-at="2026-03-25T12:20:14 IST" duration-ms="1777" status="PASS">
+        </test-method> <!-- verifyUserCanCreateAdminUsers -->
+        <test-method is-config="true" signature="browserQuitAndClose(org.testng.ITestResult)[pri:0, instance:testscript.AdminUsersTest@6f43c82]" started-at="2026-03-25T12:53:36 IST" name="browserQuitAndClose" finished-at="2026-03-25T12:53:36 IST" duration-ms="381" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Chrome]]>
+                <![CDATA[[TestResult name=verifyUserCanCreateAdminUsers status=SUCCESS method=AdminUsersTest.verifyUserCanCreateAdminUsers()[pri:0, instance:testscript.AdminUsersTest@6f43c82] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- browserinitalization -->
-        <test-method signature="verifyTheUserisAbleToLoginUsingInvalidusernameandvalidpassword()[pri:0, instance:testscript.LoginTest@7dfd3c81]" started-at="2026-03-25T12:20:14 IST" name="verifyTheUserisAbleToLoginUsingInvalidusernameandvalidpassword" description="This test case verifies that the application does not allow a user to log in when an incorrect (invalid) username is provided along with a valid password. The system should display an appropriate error message or alert indicating unsuccessful login." finished-at="2026-03-25T12:20:15 IST" duration-ms="1040" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyTheUserisAbleToLoginUsingInvalidusernameandvalidpassword -->
-        <test-method is-config="true" signature="browserQuit()[pri:0, instance:testscript.LoginTest@7dfd3c81]" started-at="2026-03-25T12:20:15 IST" name="browserQuit" finished-at="2026-03-25T12:20:16 IST" duration-ms="329" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserQuit -->
-        <test-method is-config="true" signature="browserinitalization(java.lang.String)[pri:0, instance:testscript.LoginTest@7dfd3c81]" started-at="2026-03-25T12:20:16 IST" name="browserinitalization" finished-at="2026-03-25T12:20:18 IST" duration-ms="2048" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserinitalization -->
-        <test-method signature="verifyTheUserisAbleToLoginUsingValidCredentials()[pri:0, instance:testscript.LoginTest@7dfd3c81]" started-at="2026-03-25T12:20:18 IST" name="verifyTheUserisAbleToLoginUsingValidCredentials" description="This test case verifies that the application allow a user to log in when both the username and password are correct.The system should display an appropriate message or alert indicating successful login." finished-at="2026-03-25T12:20:19 IST" duration-ms="1257" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyTheUserisAbleToLoginUsingValidCredentials -->
-        <test-method is-config="true" signature="browserQuit()[pri:0, instance:testscript.LoginTest@7dfd3c81]" started-at="2026-03-25T12:20:19 IST" name="browserQuit" finished-at="2026-03-25T12:20:19 IST" duration-ms="295" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserQuit -->
-        <test-method is-config="true" signature="browserinitalization(java.lang.String)[pri:0, instance:testscript.LoginTest@7dfd3c81]" started-at="2026-03-25T12:20:19 IST" name="browserinitalization" finished-at="2026-03-25T12:20:21 IST" duration-ms="2108" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserinitalization -->
-        <test-method signature="verifyTheUserisAbleToLoginUsingValidusernameandinvalidPassword()[pri:0, instance:testscript.LoginTest@7dfd3c81]" started-at="2026-03-25T12:20:21 IST" name="verifyTheUserisAbleToLoginUsingValidusernameandinvalidPassword" description="This test case verifies that the application prevents login when a correct (valid) username is entered with an incorrect (invalid) password.The system should display an appropriate error message or alert indicating that authentication has failed." finished-at="2026-03-25T12:20:22 IST" duration-ms="959" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyTheUserisAbleToLoginUsingValidusernameandinvalidPassword -->
-        <test-method is-config="true" signature="browserQuit()[pri:0, instance:testscript.LoginTest@7dfd3c81]" started-at="2026-03-25T12:20:22 IST" name="browserQuit" finished-at="2026-03-25T12:20:23 IST" duration-ms="323" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserQuit -->
-      </class> <!-- testscript.LoginTest -->
+        </test-method> <!-- browserQuitAndClose -->
+      </class> <!-- testscript.AdminUsersTest -->
     </test> <!-- Test -->
   </suite> <!-- GroceryApp -->
 </testng-results>

@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [GroceryApp]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="generateReport.Listeners"/>
+  </listeners>
   <test thread-count="5" name="Test(failed)">
+    <parameter name="browser" value="Chrome"/>
     <classes>
       <class name="testscript.AdminUsersTest">
         <methods>
           <include name="verifyUserCanCreateAdminUsers"/>
           <include name="browserinitalization"/>
-          <include name="browserQuit"/>
+          <include name="browserQuitAndClose"/>
         </methods>
       </class> <!-- testscript.AdminUsersTest -->
     </classes>

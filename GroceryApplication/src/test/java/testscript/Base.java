@@ -11,6 +11,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 
+import utilities.ScreenshotUtility;
 import utilities.waitUtility;
 
 public class Base
@@ -39,11 +40,17 @@ public class Base
 		driver.manage().window().maximize(); // maximize the browser window
 		
 	}
-@AfterMethod (alwaysRun=true)
 
-	public void browserQuit() 
+@AfterMethod(alwaysRun=true)
+
+	public void browserQuitAndClose(ITestResult iTestResult) throws IOException 
 	{
-		// driver.close(); //close the current browser window
-		driver.quit(); // close all browser windows
+		if(iTestResult.getStatus()==iTestResult.FAILURE) //iTestResult
+		{
+			ScreenshotUtility screenshot=new ScreenshotUtility();
+			screenshot.getScreenShot(driver, iTestResult.getName());//passing 
+		}
+		
+		driver.quit();
 	}
 }

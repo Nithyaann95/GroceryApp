@@ -42,7 +42,7 @@ public class AdminUsersTest extends Base
         String usernames1=faker.createRandomFirstName();
         String passwords1=faker.createRandomLastName();
 		adminuserspage=homepage.clickOnadminUsersMoreInfo();
-		adminuserspage.clickAdminNewTab().userTab(usernames1).passwordTab(passwords1).selectUserType().clickAdminNewTab();
+		adminuserspage.clickAdminNewTab().userTab(usernames1).passwordTab(passwords1).selectUserType().clicksaveButton();
 		//adminuserspage.userTab(usernames1);
 		//adminuserspage.passwordTab(passwords1);
 		//adminuserspage.selectUserType();
