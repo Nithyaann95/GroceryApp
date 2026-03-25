@@ -2,12 +2,15 @@
 <testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-03-19T11:18:40 IST" name="GroceryAppCrossBrowserTesting" finished-at="2026-03-19T11:19:18 IST" duration-ms="37249">
+  <suite started-at="2026-03-25T12:19:56 IST" name="GroceryApp" finished-at="2026-03-25T12:20:23 IST" duration-ms="26338">
     <groups>
+      <group name="regression">
+        <method signature="LoginTest.verifyTheUserisAbleToLoginUsingValidCredentials()[pri:0, instance:testscript.LoginTest@7dfd3c81]" name="verifyTheUserisAbleToLoginUsingValidCredentials" class="testscript.LoginTest"/>
+      </group> <!-- regression -->
     </groups>
-    <test started-at="2026-03-19T11:18:40 IST" name="Chrome" finished-at="2026-03-19T11:18:55 IST" duration-ms="15164">
-      <class name="testscript.ManageNewsTest">
-        <test-method is-config="true" signature="browserinitalization(java.lang.String)[pri:0, instance:testscript.ManageNewsTest@c730b35]" started-at="2026-03-19T11:18:51 IST" name="browserinitalization" finished-at="2026-03-19T11:18:52 IST" duration-ms="1695" status="PASS">
+    <test started-at="2026-03-25T12:19:56 IST" name="Test" finished-at="2026-03-25T12:20:23 IST" duration-ms="26338">
+      <class name="testscript.LoginTest">
+        <test-method is-config="true" signature="browserinitalization(java.lang.String)[pri:0, instance:testscript.LoginTest@7dfd3c81]" started-at="2026-03-25T12:19:57 IST" name="browserinitalization" finished-at="2026-03-25T12:20:07 IST" duration-ms="10168" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,17 +21,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserinitalization -->
-        <test-method signature="verifyTheUserAbleToManageNewsPage()[pri:0, instance:testscript.ManageNewsTest@c730b35]" started-at="2026-03-19T11:18:52 IST" name="verifyTheUserAbleToManageNewsPage" finished-at="2026-03-19T11:18:55 IST" duration-ms="2703" status="PASS">
+        <test-method signature="verifyTheUserisAbleToLoginUsingInvalidusernameandPassword()[pri:0, instance:testscript.LoginTest@7dfd3c81]" started-at="2026-03-25T12:20:07 IST" name="verifyTheUserisAbleToLoginUsingInvalidusernameandPassword" description="This test case verifies that the application does not allow a user to log in when both the username and password are incorrect. The system should reject the login attempt and display an appropriate error message or alert indicating invalid credentials." finished-at="2026-03-25T12:20:12 IST" duration-ms="5143" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyTheUserAbleToManageNewsPage -->
-        <test-method is-config="true" signature="browserQuit()[pri:0, instance:testscript.ManageNewsTest@c730b35]" started-at="2026-03-19T11:18:55 IST" name="browserQuit" finished-at="2026-03-19T11:18:55 IST" duration-ms="285" status="PASS">
+        </test-method> <!-- verifyTheUserisAbleToLoginUsingInvalidusernameandPassword -->
+        <test-method is-config="true" signature="browserQuit()[pri:0, instance:testscript.LoginTest@7dfd3c81]" started-at="2026-03-25T12:20:12 IST" name="browserQuit" finished-at="2026-03-25T12:20:13 IST" duration-ms="765" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserQuit -->
-      </class> <!-- testscript.ManageNewsTest -->
-      <class name="testscript.ManageContactTest">
-        <test-method is-config="true" signature="browserinitalization(java.lang.String)[pri:0, instance:testscript.ManageContactTest@55182842]" started-at="2026-03-19T11:18:40 IST" name="browserinitalization" finished-at="2026-03-19T11:18:43 IST" duration-ms="3116" status="PASS">
+        <test-method is-config="true" signature="browserinitalization(java.lang.String)[pri:0, instance:testscript.LoginTest@7dfd3c81]" started-at="2026-03-25T12:20:13 IST" name="browserinitalization" finished-at="2026-03-25T12:20:14 IST" duration-ms="1777" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -39,59 +40,53 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserinitalization -->
-        <test-method signature="verifyUserCanCreateManageContact()[pri:0, instance:testscript.ManageContactTest@55182842]" started-at="2026-03-19T11:18:43 IST" name="verifyUserCanCreateManageContact" finished-at="2026-03-19T11:18:50 IST" duration-ms="6878" status="PASS">
+        <test-method signature="verifyTheUserisAbleToLoginUsingInvalidusernameandvalidpassword()[pri:0, instance:testscript.LoginTest@7dfd3c81]" started-at="2026-03-25T12:20:14 IST" name="verifyTheUserisAbleToLoginUsingInvalidusernameandvalidpassword" description="This test case verifies that the application does not allow a user to log in when an incorrect (invalid) username is provided along with a valid password. The system should display an appropriate error message or alert indicating unsuccessful login." finished-at="2026-03-25T12:20:15 IST" duration-ms="1040" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyUserCanCreateManageContact -->
-        <test-method is-config="true" signature="browserQuit()[pri:0, instance:testscript.ManageContactTest@55182842]" started-at="2026-03-19T11:18:50 IST" name="browserQuit" finished-at="2026-03-19T11:18:51 IST" duration-ms="400" status="PASS">
+        </test-method> <!-- verifyTheUserisAbleToLoginUsingInvalidusernameandvalidpassword -->
+        <test-method is-config="true" signature="browserQuit()[pri:0, instance:testscript.LoginTest@7dfd3c81]" started-at="2026-03-25T12:20:15 IST" name="browserQuit" finished-at="2026-03-25T12:20:16 IST" duration-ms="329" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserQuit -->
-      </class> <!-- testscript.ManageContactTest -->
-    </test> <!-- Chrome -->
-    <test started-at="2026-03-19T11:18:56 IST" name="Firefoxtest" finished-at="2026-03-19T11:19:18 IST" duration-ms="22045">
-      <class name="testscript.ManageNewsTest">
-        <test-method is-config="true" signature="browserinitalization(java.lang.String)[pri:0, instance:testscript.ManageNewsTest@65e98b1c]" started-at="2026-03-19T11:19:07 IST" name="browserinitalization" finished-at="2026-03-19T11:19:13 IST" duration-ms="6096" status="PASS">
+        <test-method is-config="true" signature="browserinitalization(java.lang.String)[pri:0, instance:testscript.LoginTest@7dfd3c81]" started-at="2026-03-25T12:20:16 IST" name="browserinitalization" finished-at="2026-03-25T12:20:18 IST" duration-ms="2048" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Firefox]]>
+                <![CDATA[Chrome]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserinitalization -->
-        <test-method signature="verifyTheUserAbleToManageNewsPage()[pri:0, instance:testscript.ManageNewsTest@65e98b1c]" started-at="2026-03-19T11:19:13 IST" name="verifyTheUserAbleToManageNewsPage" finished-at="2026-03-19T11:19:16 IST" duration-ms="3223" status="PASS">
+        <test-method signature="verifyTheUserisAbleToLoginUsingValidCredentials()[pri:0, instance:testscript.LoginTest@7dfd3c81]" started-at="2026-03-25T12:20:18 IST" name="verifyTheUserisAbleToLoginUsingValidCredentials" description="This test case verifies that the application allow a user to log in when both the username and password are correct.The system should display an appropriate message or alert indicating successful login." finished-at="2026-03-25T12:20:19 IST" duration-ms="1257" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyTheUserAbleToManageNewsPage -->
-        <test-method is-config="true" signature="browserQuit()[pri:0, instance:testscript.ManageNewsTest@65e98b1c]" started-at="2026-03-19T11:19:16 IST" name="browserQuit" finished-at="2026-03-19T11:19:18 IST" duration-ms="1511" status="PASS">
+        </test-method> <!-- verifyTheUserisAbleToLoginUsingValidCredentials -->
+        <test-method is-config="true" signature="browserQuit()[pri:0, instance:testscript.LoginTest@7dfd3c81]" started-at="2026-03-25T12:20:19 IST" name="browserQuit" finished-at="2026-03-25T12:20:19 IST" duration-ms="295" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserQuit -->
-      </class> <!-- testscript.ManageNewsTest -->
-      <class name="testscript.ManageContactTest">
-        <test-method is-config="true" signature="browserinitalization(java.lang.String)[pri:0, instance:testscript.ManageContactTest@1ff4931d]" started-at="2026-03-19T11:18:56 IST" name="browserinitalization" finished-at="2026-03-19T11:19:01 IST" duration-ms="5699" status="PASS">
+        <test-method is-config="true" signature="browserinitalization(java.lang.String)[pri:0, instance:testscript.LoginTest@7dfd3c81]" started-at="2026-03-25T12:20:19 IST" name="browserinitalization" finished-at="2026-03-25T12:20:21 IST" duration-ms="2108" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Firefox]]>
+                <![CDATA[Chrome]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserinitalization -->
-        <test-method signature="verifyUserCanCreateManageContact()[pri:0, instance:testscript.ManageContactTest@1ff4931d]" started-at="2026-03-19T11:19:01 IST" name="verifyUserCanCreateManageContact" finished-at="2026-03-19T11:19:05 IST" duration-ms="3929" status="PASS">
+        <test-method signature="verifyTheUserisAbleToLoginUsingValidusernameandinvalidPassword()[pri:0, instance:testscript.LoginTest@7dfd3c81]" started-at="2026-03-25T12:20:21 IST" name="verifyTheUserisAbleToLoginUsingValidusernameandinvalidPassword" description="This test case verifies that the application prevents login when a correct (valid) username is entered with an incorrect (invalid) password.The system should display an appropriate error message or alert indicating that authentication has failed." finished-at="2026-03-25T12:20:22 IST" duration-ms="959" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyUserCanCreateManageContact -->
-        <test-method is-config="true" signature="browserQuit()[pri:0, instance:testscript.ManageContactTest@1ff4931d]" started-at="2026-03-19T11:19:05 IST" name="browserQuit" finished-at="2026-03-19T11:19:07 IST" duration-ms="1573" status="PASS">
+        </test-method> <!-- verifyTheUserisAbleToLoginUsingValidusernameandinvalidPassword -->
+        <test-method is-config="true" signature="browserQuit()[pri:0, instance:testscript.LoginTest@7dfd3c81]" started-at="2026-03-25T12:20:22 IST" name="browserQuit" finished-at="2026-03-25T12:20:23 IST" duration-ms="323" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserQuit -->
-      </class> <!-- testscript.ManageContactTest -->
-    </test> <!-- Firefoxtest -->
-  </suite> <!-- GroceryAppCrossBrowserTesting -->
+      </class> <!-- testscript.LoginTest -->
+    </test> <!-- Test -->
+  </suite> <!-- GroceryApp -->
 </testng-results>
